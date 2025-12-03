@@ -23,13 +23,35 @@ main{
 section{
    display: grid;
    gap: 10px;
-   grid-template-columns: repeat(3, 50px) ;
+   grid-template-columns: repeat(2, 1fr) ;
+   grid-template-rows: repeat(2, 1fr);
    border: 1px solid red;
+   min-height: 350px;
+
+   grid-template-areas: 
+   "box-one box-one box-two box-two";
 } 
 
 
 .box{
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    /* height: 30px; */
     background-color: #ffffff;
+}
+
+
+.green{
+    background-color: green;
+}
+
+.purple{
+    background-color: purple;
+}
+
+#box-one{
+    grid-area: box-one;
+}
+
+#box-two{
+    grid-area: box-two;
 }
